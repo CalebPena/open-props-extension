@@ -1,21 +1,20 @@
 {
-  "name": "REPLACE_ME",
-  "description": "REPLACE_ME",
-  "author": "REPLACE_ME",
-  "license": "MIT",
-  "version": "0.0.1",
-  "publisher": "REPLACE_ME",
-  "repository": {
-    "type": "git",
-    "url": "REPLACE_ME"
-  },
-  "engines": {
-    "vscode": "^1.75.0"
-  },
-  "dependencies": {
-    "vscode-languageclient": "^8.1.0"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.81.0"
-  }
+	"name": "open-props-svelte",
+	"description": "Open Props VSCode extension",
+	"author": "Caleb Peña",
+	"license": "MIT",
+	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/CalebPena/open-props-svelte"
+	},
+	"engines": {
+		"vscode": "^1.75.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^8.1.0"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.81.0"
+	}
 }
