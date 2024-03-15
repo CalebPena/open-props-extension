@@ -6,7 +6,7 @@
 	"version": "0.0.1",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/CalebPena/open-props-svelte"
+		"url": "https://github.com/CalebPena/open-props-extension"
 	},
 	"engines": {
 		"vscode": "^1.75.0"
