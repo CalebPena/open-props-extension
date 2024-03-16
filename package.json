@@ -13,7 +13,20 @@
 	],
 	"main": "./client/out/extension",
 	"contributes": {
-		"configuration": {}
+		"configuration": {
+			"title": "Open Props",
+			"properties": {
+				"openProps.fileTypes": {
+					"type": "array",
+					"default": [
+						"css",
+						"svelte"
+					],
+					"description": "File types to use the Open Props extension on.",
+					"scope": "resource"
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

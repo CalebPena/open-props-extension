@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { workspace, ExtensionContext } from 'vscode';
+import { workspace, ExtensionContext, window } from 'vscode';
 
 import {
 	LanguageClient,
@@ -26,12 +26,20 @@ export function activate(context: ExtensionContext) {
 		},
 	};
 
+	let languages = workspace
+		.getConfiguration('openProps')
+		.get('fileTypes') as string[];
+
 	// Options to control the language client
 	const clientOptions: LanguageClientOptions = {
 		// Register the server for all documents by default
 		documentSelector: [
-			{ scheme: 'file', language: 'css' },
-			{ scheme: 'file', language: 'svelte' },
+			...languages.map((lang) => {
+				return {
+					scheme: 'file',
+					language: lang,
+				};
+			}),
 		],
 		synchronize: {
 			// Notify the server about file changes to '.clientrc files contained in the workspace
@@ -41,8 +49,8 @@ export function activate(context: ExtensionContext) {
 
 	// Create the language client and start the client.
 	client = new LanguageClient(
-		'open-props-svelte',
-		'Open Props Svelte',
+		'open-props',
+		'Open Props',
 		serverOptions,
 		clientOptions
 	);
