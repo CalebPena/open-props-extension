@@ -31,12 +31,6 @@ connection.onInitialize((params: InitializeParams) => {
 	return result;
 });
 
-documents.onDidChangeContent((change) => {
-	connection.window.showInformationMessage(
-		'onDidChangeContent: ' + change.document.uri
-	);
-});
-
 function getLine(uri: string, position: Position) {
 	const document = documents.get(uri);
 
