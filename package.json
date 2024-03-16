@@ -1,5 +1,6 @@
 {
 	"name": "open-props-lsp",
+	"displayName": "Open Props",
 	"description": "Open Props Language Server",
 	"author": "Caleb Peña",
 	"license": "MIT",
